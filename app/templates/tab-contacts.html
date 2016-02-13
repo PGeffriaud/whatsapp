@@ -1,0 +1,13 @@
+<ion-view view-title="Contacts">
+  <ion-content>
+    <label class="item item-input">
+      <i class="icon ion-search placeholder-icon"></i>
+      <input type="text" placeholder="Search" ng-model="filter">
+    </label>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="c in contacts | filter:{lastName:filter}" type="item-text-wrap">
+        <img ng-src="{{c.picture}}"> {{c.firstName}} {{c.lastName}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

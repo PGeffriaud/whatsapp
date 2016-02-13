@@ -3,48 +3,93 @@
 
   angular.module('starter.services', [])
 
-    .factory('Chats', function () {
-      // Might use a resource here that returns a JSON array
+    .factory('Contacts', function () {
 
       // Some fake testing data
-      var chats = [{
-        id: 0,
-        name: 'Ben Sparrow',
-        lastText: 'You on your way?',
-        face: 'images/ben.png'
-      }, {
-        id: 1,
-        name: 'Max Lynx',
-        lastText: 'Hey, it\'s me',
-        face: 'images/max.png'
-      }, {
-        id: 2,
-        name: 'Adam Bradleyson',
-        lastText: 'I should buy a boat',
-        face: 'images/adam.jpg'
-      }, {
-        id: 3,
-        name: 'Perry Governor',
-        lastText: 'Look at my mukluks!',
-        face: 'images/perry.png'
-      }, {
-        id: 4,
-        name: 'Mike Harrington',
-        lastText: 'This is wicked good ice cream.',
-        face: 'images/mike.png'
-      }];
+      var contacts = [
+        {
+          "_id": "56bdabc05a103fcd46d81282",
+          "firstName": "Tracey",
+          "lastName": "Hoover",
+          "email": "traceyhoover@biotica.com",
+          "picture": "images/default.png"
+        },
+        {
+          "_id": "56bdabc0f476b54f85304500",
+          "firstName": "Hunt",
+          "lastName": "Russell",
+          "email": "huntrussell@biotica.com",
+          "picture": "images/default.png"
+        },
+        {
+          "_id": "56bdabc099ac746e3431b274",
+          "firstName": "Cabrera",
+          "lastName": "Yates",
+          "email": "cabrerayates@biotica.com",
+          "picture": "images/default.png"
+        },
+        {
+          "_id": "56bdabc0f0380d1af47be561",
+          "firstName": "Althea",
+          "lastName": "Adkins",
+          "email": "altheaadkins@biotica.com",
+          "picture": "images/default.png"
+        },
+        {
+          "_id": "56bdabc0e5832ad323798d1e",
+          "firstName": "Eileen",
+          "lastName": "Rodgers",
+          "email": "eileenrodgers@biotica.com",
+          "picture": "images/default.png"
+        },
+        {
+          "_id": "56bdabc0ee35ffc71e19ce92",
+          "firstName": "Dejesus",
+          "lastName": "Baird",
+          "email": "dejesusbaird@biotica.com",
+          "picture": "images/default.png"
+        },
+        {
+          "_id": "56bdabc0d31185378be92efe",
+          "firstName": "Jeanine",
+          "lastName": "Kidd",
+          "email": "jeaninekidd@biotica.com",
+          "picture": "images/default.png"
+        },
+        {
+          "_id": "56bdabc087701f2a6fea3a2b",
+          "firstName": "Helga",
+          "lastName": "Byrd",
+          "email": "helgabyrd@biotica.com",
+          "picture": "images/default.png"
+        },
+        {
+          "_id": "56bdabc00b44bbd46f349943",
+          "firstName": "Lancaster",
+          "lastName": "Morris",
+          "email": "lancastermorris@biotica.com",
+          "picture": "images/default.png"
+        },
+        {
+          "_id": "56bdabc0ad56beec78ca93a2",
+          "firstName": "Dianna",
+          "lastName": "Jones",
+          "email": "diannajones@biotica.com",
+          "picture": "images/default.png"
+        }
+      ];
 
       return {
         all: function () {
-          return chats;
+          return contacts;
         },
-        remove: function (chat) {
-          chats.splice(chats.indexOf(chat), 1);
+        remove: function (c) {
+          contacts.splice(contacts.indexOf(c), 1);
         },
-        get: function (chatId) {
-          for (var i = 0; i < chats.length; i++) {
-            if (chats[i].id === parseInt(chatId)) {
-              return chats[i];
+        get: function (cId) {
+          for (var i = 0; i < contacts.length; i++) {
+            if (contacts[i].id === parseInt(cId)) {
+              return contacts[i];
             }
           }
           return null;
