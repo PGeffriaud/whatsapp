@@ -1,12 +1,12 @@
-# whatsapp
+# Whatsapp like
 This a what's app application in Javascript
 
-# Requirements
+### Requirements
 You need to install `grunt-cli` : `npm install -g grunt-cli`
 
-# Installation
+### Installation
 `npm install`
 `bower install`
 
-# Run
+### Run
 `grunt serve`
