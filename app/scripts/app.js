@@ -7,7 +7,7 @@
 // 'starter.controllers' is found in controllers.js
 (function () {
   'use strict';
-  angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+  angular.module('whatsapp', ['ionic', 'starter.controllers', 'starter.services'])
 
     .run(function ($ionicPlatform) {
       $ionicPlatform.ready(function () {
