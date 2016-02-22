@@ -1,5 +1,11 @@
-<ion-view view-title="Conversations">
+<ion-view title="Conversations">
   <ion-content>
+    <div class="item item-button-right">
+      Nouvelle conversation
+      <a href="#/tab/chat/add" class="button button-positive">
+        <i class="icon ion-plus"></i>
+      </a>
+    </div>
     <ion-list>
       <ion-item class="item item-icon-right" ng-repeat="c in chats" type="item-text-wrap" href="#/tab/chats/{{c._id}}">
         <h2>{{c.name}}</h2>

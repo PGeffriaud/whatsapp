@@ -13,7 +13,10 @@
 
     .controller('ChatDetailCtrl', function ($scope, $stateParams, Chats) {
       $scope.chat = Chats.get($stateParams.chatId);
-      console.log($scope.chat);
+    })
+
+    .controller('ChatAddCtrl', function ($scope, Chats) {
+
     })
 
     .controller('AccountCtrl', function ($scope) {

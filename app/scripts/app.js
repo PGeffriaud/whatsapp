@@ -70,7 +70,15 @@
             }
           }
         })
-
+        .state('tab.chat-add', {
+          url: '/chat/add',
+          views: {
+            'tab-chats':{
+              templateUrl: 'templates/chat-add.html',
+              controller: 'ChatAddCtrl'
+            }
+          }
+        })
         .state('tab.account', {
           url: '/account',
           views: {
