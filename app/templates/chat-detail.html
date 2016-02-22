@@ -1,5 +1,45 @@
 <ion-view view-title="{{chat.name}}">
-  <ion-content>
-    <p>No message yet</p>
+  <ion-content has-bouncing="true" class="has-header has-footer"
+               delegate-handle="userMessageScroll">
+
+    <div ng-repeat="m in messages" class="message-wrapper">
+
+      <div ng-if="m.sender !== 'Tracey'">
+        <div class="chat-bubble left">
+
+          <div class="message">
+            {{m.message}}
+            <div class="message-detail">
+              <span class="bold">{{m.sender}}</span>,
+              <span am-time-ago="m.sentDate"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div ng-if="m.sender === 'Tracey'">
+        <div class="chat-bubble right">
+
+          <div class="message">
+            {{m.message}}
+            <div class="message-detail">
+              <span class="bold">{{m.sender}}</span>,
+              <span am-time-ago="m.sentDate"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
   </ion-content>
+  <ion-footer-bar class="bar-stable item-input-inset message-footer" keyboard-attach>
+    <label class="item item-input-wrapper">
+        <input type="text" ng-model="input.message" placeholder="Send a message..." maxlength="1500" />
+      </label>
+      <div class="footer-btn-wrap">
+        <button class="button button-icon icon ion-android-send" ng-disabled="!input.message || input.message === ''">
+        </button>
+      </div>
+    </label>
+  </ion-footer-bar>
 </ion-view>

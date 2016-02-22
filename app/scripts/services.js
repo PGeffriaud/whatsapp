@@ -80,6 +80,91 @@
         }
       };
     })
+    .factory('Messages', function() {
+      var messages = [
+        {
+          "_id": "56cb1c459b71a7a232cd3b04",
+          "chatId": "56c20618aa880f8fee6c265f",
+          "sender": "Tracey",
+          "message": "sunt qui",
+          "sentDate": "Mon Feb 22 2016 15:33:41 GMT+0100 (CET)"
+        },
+        {
+          "_id": "56cb1c45198b649bbb9420da",
+          "chatId": "56c20618aa880f8fee6c265f",
+          "sender": "Althea",
+          "message": "aliqua aliquip",
+          "sentDate": "Mon Feb 22 2016 15:33:41 GMT+0100 (CET)"
+        },
+        {
+          "_id": "56cb1c45ef3ce832c385a34d",
+          "chatId": "56c20618aa880f8fee6c265f",
+          "sender": "Tracey",
+          "message": "adipisicing consectetur",
+          "sentDate": "Mon Feb 22 2016 15:33:41 GMT+0100 (CET)"
+        },
+        {
+          "_id": "56cb1c459aef10c1d4e7d396",
+          "chatId": "56c20618aa880f8fee6c265f",
+          "sender": "Eileen",
+          "message": "consectetur nulla",
+          "sentDate": "Mon Feb 22 2016 15:33:41 GMT+0100 (CET)"
+        },
+        {
+          "_id": "56cb1c458839809d3456dc38",
+          "chatId": "56c20618aa880f8fee6c265f",
+          "sender": "Eileen",
+          "message": "consectetur mollit",
+          "sentDate": "Mon Feb 22 2016 15:33:41 GMT+0100 (CET)"
+        },
+        {
+          "_id": "56cb1c458a52ebf2f2684ab6",
+          "chatId": "56c20618aa880f8fee6c265f",
+          "sender": "Eileen",
+          "message": "fugiat ullamco",
+          "sentDate": "Mon Feb 22 2016 15:33:41 GMT+0100 (CET)"
+        },
+        {
+          "_id": "56cb1c4597e3bf306b1fa95f",
+          "chatId": "56c20618aa880f8fee6c265f",
+          "sender": "Jeanine",
+          "message": "pariatur irure",
+          "sentDate": "Mon Feb 22 2016 15:33:41 GMT+0100 (CET)"
+        },
+        {
+          "_id": "56cb1c4524d021008f0b3b8e",
+          "chatId": "56c20618aa880f8fee6c265f",
+          "sender": "Althea",
+          "message": "amet commodo",
+          "sentDate": "Mon Feb 22 2016 15:33:41 GMT+0100 (CET)"
+        },
+        {
+          "_id": "56cb1c45e96b958315a15034",
+          "chatId": "56c20618aa880f8fee6c265f",
+          "sender": "Dejesus",
+          "message": "amet aliquip",
+          "sentDate": "Mon Feb 22 2016 15:33:41 GMT+0100 (CET)"
+        },
+        {
+          "_id": "56cb1c453ddd0ea49ad57a19",
+          "chatId": "56c20618aa880f8fee6c265f",
+          "sender": "Dejesus",
+          "message": "est veniam",
+          "sentDate": "Mon Feb 22 2016 15:33:41 GMT+0100 (CET)"
+        }
+      ];
+
+      return {
+        all: function () {
+          return messages;
+        },
+        fromChat: function (chatId) {
+          return messages.filter(function(m){
+            return m.chatId === chatId;
+          });
+        }
+      };
+    })
     .factory('Contacts', function () {
 
       // Some fake testing contacts

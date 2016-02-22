@@ -11,8 +11,9 @@
 
     })
 
-    .controller('ChatDetailCtrl', function ($scope, $stateParams, Chats) {
+    .controller('ChatDetailCtrl', function ($scope, $stateParams, Chats, Messages) {
       $scope.chat = Chats.get($stateParams.chatId);
+      $scope.messages = Messages.fromChat($stateParams.chatId);
     })
 
     .controller('ChatAddCtrl', function ($scope, Chats) {
