@@ -32,16 +32,21 @@
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
-    <!-- your app's js -->
-    <!-- build:js scripts/scripts.js -->
+    <!-- application -->
     <script src="scripts/app.js"></script>
-    <script src="scripts/controllers.js"></script>
-    <script src="scripts/services.js"></script>
+
+    <!-- controllers -->
+    <script src="scripts/contacts.ctrl.js"></script>
+    <script src="scripts/chats.ctrl.js"></script>
+    <script src="scripts/account.ctrl.js"></script>
+
+    <!-- services -->
+    <script src="scripts/contacts.srv.js"></script>
+    <script src="scripts/chats.srv.js"></script>
+    <script src="scripts/messages.srv.js"></script>
+
+    <!-- configuration -->
     <script src="scripts/configuration.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
-    <!-- angular moment -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-moment/0.8.2/angular-moment.min.js"></script>
-    <!-- endbuild -->
   </head>
   <body ng-app="whatsapp">
     <!--
