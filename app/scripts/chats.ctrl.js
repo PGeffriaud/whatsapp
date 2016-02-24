@@ -24,7 +24,13 @@
     })
 
     // Create a new chat
-    .controller('ChatAddCtrl', function ($scope, ChatsSrv) {
-      // TODO create a new chat
-    })
+    .controller('ChatAddCtrl', function ($scope, $location, uuid2, ChatsSrv) {
+      $scope.chat = {};
+      $scope.addChat = function () {
+        $scope.chat._id = uuid2.newguid();
+        $scope.chat.creationDate = new Date().toISOString();
+        ChatsSrv.createChat($scope.chat);
+        $location.path('/tab/chats');
+      }
+    });
 })();

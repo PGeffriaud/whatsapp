@@ -1,15 +1,17 @@
 <ion-view view-title="Nouvelle conversation">
   <ion-content>
+    <form ng-submit="addChat()">
     <div class="list list-inset">
       <label class="item item-input">
-        <input type="text" placeholder="Nom de la conversation">
+        <input type="text" ng-model="chat.name" placeholder="Nom de la conversation">
       </label>
       <label class="item item-input">
-        <input type="text" placeholder="Description">
+        <input type="text" ng-model="chat.description" placeholder="Description">
       </label>
-      <button class="button button-block button-positive">
+      <button type="submit" class="button button-block button-positive">
         Créer
       </button>
     </div>
+    </form>
   </ion-content>
 </ion-view>
