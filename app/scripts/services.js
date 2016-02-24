@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  angular.module('starter.services', [])
+  angular.module('whatsapp.services', [])
     .factory('Chats', function(){
       // Some fake testing chats
       var chats = [

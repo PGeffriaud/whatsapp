@@ -1,6 +1,6 @@
 (function () {
   'use strict';
-  angular.module('starter.controllers', [])
+  angular.module('whatsapp.controllers', [])
 
     .controller('ContactsCtrl', function ($scope, Contacts) {
         $scope.contacts = Contacts.all();
