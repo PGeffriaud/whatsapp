@@ -1,72 +1,84 @@
 [
   {
-    "_id": "56cb1c459b71a7a232cd3b04",
     "chatId": "56c20618aa880f8fee6c265f",
-    "sender": "Tracey",
-    "message": "sunt qui",
-    "sentDate": "Mon Feb 22 2016 15:33:41 GMT+0100 (CET)"
+    "messages": [
+      {
+        "_id": "56cdd4abaaca26008922858e",
+        "sender": "Jeanine",
+        "message": "do voluptate qui",
+        "sentDate": "Wed Feb 24 2016 17:04:59 GMT+0100 (CET)"
+      },
+      {
+        "_id": "56cdd4ab8504ab59b5ad44aa",
+        "sender": "Cabrera",
+        "message": "ut dolor enim",
+        "sentDate": "Wed Feb 24 2016 17:04:59 GMT+0100 (CET)"
+      },
+      {
+        "_id": "56cdd4ab3e91bce118213a01",
+        "sender": "Althea",
+        "message": "laboris ex nisi",
+        "sentDate": "Wed Feb 24 2016 17:04:59 GMT+0100 (CET)"
+      },
+      {
+        "_id": "56cdd4ab8dafe9ffcde702d2",
+        "sender": "Dejesus",
+        "message": "proident esse aliquip",
+        "sentDate": "Wed Feb 24 2016 17:04:59 GMT+0100 (CET)"
+      },
+      {
+        "_id": "56cdd4ab7d599ae2824b6059",
+        "sender": "Dejesus",
+        "message": "velit officia esse",
+        "sentDate": "Wed Feb 24 2016 17:04:59 GMT+0100 (CET)"
+      },
+      {
+        "_id": "56cdd4abdf3fddadfde6974f",
+        "sender": "Tracey",
+        "message": "ullamco nostrud exercitation",
+        "sentDate": "Wed Feb 24 2016 17:04:59 GMT+0100 (CET)"
+      },
+      {
+        "_id": "56cdd4ab82b0fe0b792e29f0",
+        "sender": "Dejesus",
+        "message": "aliquip ex enim",
+        "sentDate": "Wed Feb 24 2016 17:04:59 GMT+0100 (CET)"
+      },
+      {
+        "_id": "56cdd4ab728212ca6eb458db",
+        "sender": "Dejesus",
+        "message": "eiusmod qui aliquip",
+        "sentDate": "Wed Feb 24 2016 17:04:59 GMT+0100 (CET)"
+      },
+      {
+        "_id": "56cdd4ab9a2e21fd3c904eaa",
+        "sender": "Jeanine",
+        "message": "qui ut est",
+        "sentDate": "Wed Feb 24 2016 17:04:59 GMT+0100 (CET)"
+      },
+      {
+        "_id": "56cdd4ab98d7932b8e485fa7",
+        "sender": "Tracey",
+        "message": "do enim nostrud",
+        "sentDate": "Wed Feb 24 2016 17:04:59 GMT+0100 (CET)"
+      }
+    ]
   },
   {
-    "_id": "56cb1c45198b649bbb9420da",
     "chatId": "56c206187edc1d013e664a8d",
-    "sender": "Althea",
-    "message": "aliqua aliquip",
-    "sentDate": "Mon Feb 22 2016 15:33:41 GMT+0100 (CET)"
-  },
-  {
-    "_id": "56cb1c45ef3ce832c385a34d",
-    "chatId": "56c20618aa880f8fee6c265f",
-    "sender": "Tracey",
-    "message": "adipisicing consectetur",
-    "sentDate": "Mon Feb 22 2016 15:33:41 GMT+0100 (CET)"
-  },
-  {
-    "_id": "56cb1c459aef10c1d4e7d396",
-    "chatId": "56c20618aa880f8fee6c265f",
-    "sender": "Eileen",
-    "message": "consectetur nulla",
-    "sentDate": "Mon Feb 22 2016 15:33:41 GMT+0100 (CET)"
-  },
-  {
-    "_id": "56cb1c458839809d3456dc38",
-    "chatId": "56c20618aa880f8fee6c265f",
-    "sender": "Eileen",
-    "message": "consectetur mollit",
-    "sentDate": "Mon Feb 22 2016 15:33:41 GMT+0100 (CET)"
-  },
-  {
-    "_id": "56cb1c458a52ebf2f2684ab6",
-    "chatId": "56c20618aa880f8fee6c265f",
-    "sender": "Eileen",
-    "message": "fugiat ullamco",
-    "sentDate": "Mon Feb 22 2016 15:33:41 GMT+0100 (CET)"
-  },
-  {
-    "_id": "56cb1c4597e3bf306b1fa95f",
-    "chatId": "56c20618aa880f8fee6c265f",
-    "sender": "Jeanine",
-    "message": "pariatur irure",
-    "sentDate": "Mon Feb 22 2016 15:33:41 GMT+0100 (CET)"
-  },
-  {
-    "_id": "56cb1c4524d021008f0b3b8e",
-    "chatId": "56c20618aa880f8fee6c265f",
-    "sender": "Althea",
-    "message": "amet commodo",
-    "sentDate": "Mon Feb 22 2016 15:33:41 GMT+0100 (CET)"
-  },
-  {
-    "_id": "56cb1c45e96b958315a15034",
-    "chatId": "56c20618aa880f8fee6c265f",
-    "sender": "Dejesus",
-    "message": "amet aliquip",
-    "sentDate": "Mon Feb 22 2016 15:33:41 GMT+0100 (CET)"
-  },
-  {
-    "_id": "56cb1c453ddd0ea49ad57a19",
-    "chatId": "56c20618aa880f8fee6c265f",
-    "sender": "Dejesus",
-    "message": "est veniam",
-    "sentDate": "Mon Feb 22 2016 15:33:41 GMT+0100 (CET)"
+    "messages": [
+      {
+        "_id": "56cdd4ab650910c27c77ba9b",
+        "sender": "Hunt",
+        "message": "Lorem voluptate laboris",
+        "sentDate": "Wed Feb 24 2016 17:04:59 GMT+0100 (CET)"
+      },
+      {
+        "_id": "56cdd4aba439343dce0db5bd",
+        "sender": "Cabrera",
+        "message": "in esse exercitation",
+        "sentDate": "Wed Feb 24 2016 17:04:59 GMT+0100 (CET)"
+      }
+    ]
   }
 ]

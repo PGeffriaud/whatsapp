@@ -67,14 +67,24 @@
             return messages;
           }, function (error){
             console.log('Request failed: ' + error);
-          })
+          });
         } else {
           return $q.when(messages);
         }
       }
 
-      this.getMessages = function(){
-        return loadMessages();
+      function getMessagesFromChatId(chatId) {
+        for (var i = 0; i < messages.length; i++) {
+          if (messages[i].chatId === chatId) {
+            return messages[i].messages;
+          }
+        }
+      }
+
+      this.getMessages = function (chatId) {
+        return loadMessages().then(function () {
+          return getMessagesFromChatId(chatId);
+        });
       };
     }]);
 })();

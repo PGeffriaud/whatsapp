@@ -16,16 +16,16 @@
     })
 
     .controller('ChatDetailCtrl', function ($scope, $stateParams, ChatsSrv, MessagesSrv) {
-      $scope.chat = ChatsSrv.getChat($stateParams.chatId);
-      MessagesSrv.getMessages().then(function(messages){
-        $scope.messages = messages.filter(function(m){
-          return m.chatId === $stateParams.chatId;
-        });
+      ChatsSrv.getChat($stateParams.chatId).then(function (chat) {
+        $scope.chat = chat;
+      });
+      MessagesSrv.getMessages($stateParams.chatId).then(function (messages) {
+        $scope.messages = messages;
       });
     })
 
     .controller('ChatAddCtrl', function ($scope, ChatsSrv) {
-
+      // TODO create a new chat
     })
 
     .controller('AccountCtrl', function ($scope) {
