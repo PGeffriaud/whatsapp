@@ -10,11 +10,10 @@
       ChatsSrv.getChats().then(function (chats) {
         $scope.chats = chats;
       });
-
     })
 
     // Messages of one chat
-    .controller('ChatDetailCtrl', function ($scope, $stateParams, $location, uuid2, ChatsSrv, MessagesSrv) {
+    .controller('ChatDetailCtrl', function ($scope, $stateParams, $location, $ionicScrollDelegate, $timeout, uuid2, ChatsSrv, MessagesSrv) {
       ChatsSrv.getChat($stateParams.chatId).then(function (chat) {
         $scope.chat = chat;
       });
@@ -22,15 +21,24 @@
         $scope.messages = messages;
       });
 
+      // Function to scroll to the bottom of the page
+      function scrollBottom() {
+        $timeout(function () {
+          $ionicScrollDelegate.scrollBottom(true);
+        });
+      }
+
+      scrollBottom();
       $scope.newMsg = {};
-      // Send a new message in the conversation
+
+      // Function to send a new message in the conversation
       $scope.sendMessage = function () {
         $scope.newMsg._id = uuid2.newuuid();
         $scope.newMsg.sender = 'Tracey'; // TODO add current user
         $scope.newMsg.sentDate = new Date().toISOString();
         MessagesSrv.sendMessage($scope.chat, $scope.newMsg);
         $scope.newMsg = {};
-        $location.path('/tab/chats/' + $scope.chat._id);
+        scrollBottom();
       };
     })
 
