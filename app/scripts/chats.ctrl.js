@@ -5,7 +5,7 @@
   'use strict';
   angular.module('whatsapp.controllers')
 
-    // Get le whole list of chats
+    // The whole list of chats
     .controller('ChatsCtrl', function ($scope, ChatsSrv) {
       ChatsSrv.getChats().then(function (chats) {
         $scope.chats = chats;
@@ -13,17 +13,28 @@
 
     })
 
-    // Get messages of one chat
-    .controller('ChatDetailCtrl', function ($scope, $stateParams, ChatsSrv, MessagesSrv) {
+    // Messages of one chat
+    .controller('ChatDetailCtrl', function ($scope, $stateParams, $location, uuid2, ChatsSrv, MessagesSrv) {
       ChatsSrv.getChat($stateParams.chatId).then(function (chat) {
         $scope.chat = chat;
       });
       MessagesSrv.getMessages($stateParams.chatId).then(function (messages) {
         $scope.messages = messages;
       });
+
+      $scope.newMsg = {};
+      // Send a new message in the conversation
+      $scope.sendMessage = function () {
+        $scope.newMsg._id = uuid2.newuuid();
+        $scope.newMsg.sender = 'Tracey'; // TODO add current user
+        $scope.newMsg.sentDate = new Date().toISOString();
+        MessagesSrv.sendMessage($scope.chat, $scope.newMsg);
+        $scope.newMsg = {};
+        $location.path('/tab/chats/' + $scope.chat._id);
+      };
     })
 
-    // Create a new chat
+    // Creation of a new chat
     .controller('ChatAddCtrl', function ($scope, $location, uuid2, ChatsSrv) {
       $scope.chat = {};
       $scope.addChat = function () {
@@ -31,6 +42,6 @@
         $scope.chat.creationDate = new Date().toISOString();
         ChatsSrv.createChat($scope.chat);
         $location.path('/tab/chats');
-      }
+      };
     });
 })();

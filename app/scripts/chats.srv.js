@@ -41,7 +41,7 @@
       this.createChat = function (chat) {
         return loadChats().then(function (chats) {
           chats.push(chat);
-        })
-      }
+        });
+      };
     }]);
 })();

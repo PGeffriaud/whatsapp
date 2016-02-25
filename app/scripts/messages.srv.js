@@ -24,11 +24,23 @@
             return messages[i].messages;
           }
         }
+        // in the case of the chat does not exist in messages.json
+        messages.push({
+          'chatId': chatId,
+          'messages': []
+        });
+        return messages[messages.length - 1].messages;
       }
 
       this.getMessages = function (chatId) {
         return loadMessages().then(function () {
           return getMessagesFromChatId(chatId);
+        });
+      };
+
+      this.sendMessage = function (chat, message) {
+        loadMessages().then(function () {
+          getMessagesFromChatId(chat._id).push(message);
         });
       };
     }]);
