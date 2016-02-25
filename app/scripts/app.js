@@ -7,7 +7,7 @@
 // 'whatsapp.controllers' is found in controllers.js
 (function () {
   'use strict';
-  angular.module('whatsapp', ['ionic', 'angularUUID2', 'whatsapp.controllers', 'whatsapp.services'])
+  angular.module('whatsapp', ['ionic', 'angularUUID2', 'angularMoment', 'whatsapp.controllers', 'whatsapp.services'])
 
     .run(function ($ionicPlatform) {
       $ionicPlatform.ready(function () {
