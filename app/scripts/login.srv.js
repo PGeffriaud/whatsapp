@@ -18,7 +18,7 @@
 
       this.getUserConnected = function () {
         return userConnected;
-      }
+      };
     });
 
 })();

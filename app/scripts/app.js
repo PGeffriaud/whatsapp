@@ -44,9 +44,13 @@
           templateUrl: 'templates/login.html',
           controller: 'LoginCtrl'
         })
+        .state('signup', {
+          url: '/signup',
+          templateUrl: 'templates/signup.html',
+          controller: 'SignupCtrl'
+        })
 
         // Each tab has its own nav history stack:
-
         .state('tab.contacts', {
           url: '/contacts',
           views: {
@@ -56,7 +60,6 @@
             }
           }
         })
-
         .state('tab.chats', {
           url: '/chats',
           views: {

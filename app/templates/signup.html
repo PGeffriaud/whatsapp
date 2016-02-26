@@ -1,0 +1,25 @@
+<ion-view view-title="Create Account">
+  <ion-content>
+    <form ng-submit="signup()">
+      <ion-list>
+        <ion-item class="item-input item-floating-label">
+          <span class="input-label">First Name</span>
+          <input type="text" ng-model="account.firstName" placeholder="First Name" required>
+        </ion-item>
+        <ion-item class="item-input item-floating-label">
+          <span class="input-label">Last Name</span>
+          <input type="text" ng-model="account.lastName" placeholder="Last Name" required>
+        </ion-item>
+        <ion-item class="item-input item-floating-label">
+          <span class="input-label">Email</span>
+          <input type="text" ng-model="account.email" placeholder="Email" required>
+        </ion-item>
+        <ion-item>
+          <button type="submit" class="button button-block button-positive">
+            Sign Up
+          </button>
+        </ion-item>
+      </ion-list>
+    </form>
+  </ion-content>
+</ion-view>

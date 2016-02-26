@@ -1,5 +1,6 @@
 /**
  * Created by pierreg on 24/02/16.
+ * Contains 3 controllers: ChatsCtrl, ChatDetailCtrl, ChatAddCtrl
  */
 (function () {
   'use strict';

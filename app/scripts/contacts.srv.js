@@ -24,5 +24,11 @@
         return loadContacts();
       };
 
+      this.addContact = function (contact) {
+        loadContacts().then(function (contacts) {
+          contacts.push(contact);
+        });
+      };
+
     }]);
 })();

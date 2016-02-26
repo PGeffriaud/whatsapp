@@ -10,7 +10,6 @@
         ContactsSrv.getContacts().then(function (contacts) {
           $scope.users = contacts;
         });
-
         $scope.form = {};
         $scope.login = function () {
           LoginSrv.setUserConnected($scope.form.user);
