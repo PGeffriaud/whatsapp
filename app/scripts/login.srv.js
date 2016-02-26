@@ -15,6 +15,10 @@
       this.setUserConnected = function (user) {
         userConnected = user;
       };
+
+      this.getUserConnected = function () {
+        return userConnected;
+      }
     });
 
 })();

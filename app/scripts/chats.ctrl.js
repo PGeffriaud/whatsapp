@@ -31,6 +31,7 @@
         MessagesSrv.getMessages($stateParams.chatId).then(function (messages) {
           $scope.messages = messages;
         });
+        $scope.currentUser = LoginSrv.getUserConnected();
 
         // Function to scroll to the bottom of the page
         function scrollBottom() {
@@ -45,7 +46,7 @@
         // Function to send a new message in the conversation
         $scope.sendMessage = function () {
           $scope.newMsg._id = uuid2.newuuid();
-          $scope.newMsg.sender = 'Tracey'; // TODO add current user
+          $scope.newMsg.sender = $scope.currentUser.firstName;
           $scope.newMsg.sentDate = new Date().toISOString();
           MessagesSrv.sendMessage($scope.chat, $scope.newMsg);
           $scope.newMsg = {};

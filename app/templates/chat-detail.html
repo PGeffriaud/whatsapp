@@ -4,7 +4,7 @@
 
     <ion-list>
       <ion-item ng-repeat="msg in messages | orderBy:'sentDate'" class="message-wrapper">
-        <div ng-if="msg.sender !== 'Tracey'"> <!-- TODO: test on current user -->
+        <div ng-if="msg.sender !== currentUser.firstName">
         <div class="chat-bubble left">
 
           <div class="message">
@@ -15,7 +15,7 @@
           </div>
         </div>
       </div>
-        <div ng-if="msg.sender === 'Tracey'">
+        <div ng-if="msg.sender === currentUser.firstName">
         <div class="chat-bubble right">
 
           <div class="message">
