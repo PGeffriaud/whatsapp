@@ -1,0 +1,15 @@
+<ion-view view-title="Login">
+  <ion-content>
+    <form ng-submit="login()">
+      <div class="list list-inset">
+        <label class="item item-input item-select">
+          <div class="input-label">Choose account:</div>
+          <select ng-model="form.user" ng-options="user as user.firstName for user in users"></select>
+        </label>
+        <button type="submit" class="button button-block button-positive">
+          Login
+        </button>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

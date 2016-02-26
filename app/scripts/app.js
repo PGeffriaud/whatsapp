@@ -39,6 +39,11 @@
           abstract: true,
           templateUrl: 'templates/tabs.html'
         })
+        .state('login', {
+          url: '/login',
+          templateUrl: 'templates/login.html',
+          controller: 'LoginCtrl'
+        })
 
         // Each tab has its own nav history stack:
 
@@ -90,7 +95,7 @@
         });
 
       // if none of the above states are matched, use this as the fallback
-      $urlRouterProvider.otherwise('/tab/contacts');
+      $urlRouterProvider.otherwise('/login');
 
     });
 })();

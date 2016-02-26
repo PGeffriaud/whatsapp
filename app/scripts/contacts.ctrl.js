@@ -5,10 +5,14 @@
   'use strict';
 
   angular.module('whatsapp.controllers', [])
-    .controller('ContactsCtrl', function ($scope, ContactsSrv) {
-      ContactsSrv.getContacts().then(function (contacts) {
-        $scope.contacts = contacts;
-      });
-    });
+    .controller('ContactsCtrl', ['$scope', '$location', 'ContactsSrv', 'LoginSrv',
+      function ($scope, $location, ContactsSrv, LoginSrv) {
+        if (!LoginSrv.getUserConnected()._id) {
+          $location.path('/login');
+        }
+        ContactsSrv.getContacts().then(function (contacts) {
+          $scope.contacts = contacts;
+        });
+      }]);
 
 })();
