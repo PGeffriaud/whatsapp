@@ -8,6 +8,7 @@
         if (!LoginSrv.isLogged()) {
           $location.path('/login');
         }
+        $scope.currentUser = LoginSrv.getUserConnected();
         $scope.logout = function () {
           $location.path('/login');
         };

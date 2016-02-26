@@ -1,9 +1,15 @@
 <ion-view view-title="Account">
   <ion-content>
-    <div class="list list-inset">
-      <button ng-click="logout()" class="button button-block button-assertive">
-        Logout <i class="icon ion-android-exit"></i>
-      </button>
-    </div>
+    <ion-list class="list list-inset">
+      <div class="item item-avatar item-icon-right">
+        <img src="{{currentUser.picture}}">{{currentUser.firstName}} {{currentUser.lastName}}<br>
+        {{currentUser.email}}
+      </div>
+      <div class="row">
+        <button ng-click="logout()" class="button button-block button-assertive">
+          Logout <i class="icon ion-log-out"></i>
+        </button>
+      </div>
+    </ion-list>
   </ion-content>
 </ion-view>
