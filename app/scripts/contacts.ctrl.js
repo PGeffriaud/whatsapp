@@ -7,7 +7,7 @@
   angular.module('whatsapp.controllers', [])
     .controller('ContactsCtrl', ['$scope', '$location', 'ContactsSrv', 'LoginSrv',
       function ($scope, $location, ContactsSrv, LoginSrv) {
-        if (!LoginSrv.getUserConnected()._id) {
+        if (!LoginSrv.isLogged()) {
           $location.path('/login');
         }
         ContactsSrv.getContacts().then(function (contacts) {

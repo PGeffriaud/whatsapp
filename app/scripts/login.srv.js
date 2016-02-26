@@ -5,14 +5,16 @@
   'use strict';
   angular.module('whatsapp.services')
     .service('LoginSrv', function () {
+
       var userConnected = {};
 
-      this.getUserConnected = function () {
-        return userConnected;
+      this.isLogged = function () {
+        return Object.keys(userConnected).length;
       };
 
       this.setUserConnected = function (user) {
         userConnected = user;
       };
     });
+
 })();
